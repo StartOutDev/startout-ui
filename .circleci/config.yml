@@ -16,6 +16,14 @@ jobs:
       - run: yarn --frozen-lockfile
       - run: yarn build
       - run: yarn run semantic-release
+  pages:
+    docker:
+      - image: cimg/node:12.16
+    steps:
+      - checkout
+      - run: yarn --frozen-lockfile
+      - run: yarn run build-storybook
+      - run: yarn run storybook-to-ghpages
 
 workflows:
   version: 2
@@ -25,3 +33,7 @@ workflows:
       - release:
           requires:
             - test
+      - pages:
+          filters:
+            only:
+              - master
