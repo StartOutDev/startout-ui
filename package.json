@@ -50,7 +50,6 @@
     "webpack": "^4.43.0"
   },
   "scripts": {
-    "build-storybook": "build-storybook",
     "build": "rimraf dist && tsc",
     "lint": "eslint src",
     "storybook": "start-storybook -p 9009 -s ./assets",
