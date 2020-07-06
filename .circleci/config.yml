@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   test:
     docker:
@@ -20,11 +20,8 @@ jobs:
 workflows:
   version: 2
   test_and_release:
-    # Run the test jobs first, then the release only when all the test jobs are successful
     jobs:
-      - test_node_6
-      - test_node_8
+      - test
       - release:
           requires:
-            - test_node_6
-            - test_node_8
+            - test
