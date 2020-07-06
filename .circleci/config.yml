@@ -34,6 +34,9 @@ workflows:
           requires:
             - test
       - pages:
+          requires:
+            - release
           filters:
-            only:
-              - master
+            branches:
+              only:
+                - master
