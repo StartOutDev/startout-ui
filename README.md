@@ -4,22 +4,22 @@ Design system for StartOut Australia.
 
 ## Setup
 
-In your project, first install `@startout/ui`.
+In your project, first install `startout-ui`.
 
 ```bash
-$ yarn add @startout/ui
+$ yarn add startout-ui
 ```
 
 At the entry of your application, import the `ThemeProvider` component.
 
 ```ts
-import { ThemeProvider } from "@startout/ui";
+import { ThemeProvider } from "startout-ui";
 ```
 
 Finally, render the `ThemeProvider` and any components within:
 
 ```tsx
-import { ThemeProvider, Block, Text } from "@startout/ui";
+import { ThemeProvider, Block, Text } from "startout-ui";
 
 export default () => (
   <ThemeProvider>
