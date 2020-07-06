@@ -38,7 +38,7 @@ const TextBox = styled.input.attrs<TextBoxProps>(({ type = "text" }) => ({
     color: colour && colours[colour],
     fontSize: `${textSize}rem`,
     ...(variant === "box"
-      ? { background: colours["white"], borderRadius: "4px" }
+      ? { background: colours.white, borderRadius: "4px" }
       : {
           borderBottom: `solid 3px ${colours[colour || "darkBlue"]}`,
         }),

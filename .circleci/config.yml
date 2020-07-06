@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: cimg/node:12.16
+    steps:
+      - checkout
+      - run: yarn --frozen-lockfile
+      - run: yarn lint
+      - run: yarn test
+  release:
+    docker:
+      - image: cimg/node:12.16
+    steps:
+      - checkout
+      - run: yarn --frozen-lockfile
+      - run: yarn build
+      - run: yarn semantic-release
+
+workflows:
+  version: 2
+  test_and_release:
+    # Run the test jobs first, then the release only when all the test jobs are successful
+    jobs:
+      - test_node_6
+      - test_node_8
+      - release:
+          requires:
+            - test_node_6
+            - test_node_8

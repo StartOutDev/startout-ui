@@ -33,17 +33,17 @@ export function getMargin({ margin, m, mT, mR, mB, mL, mX, mY }: Margins) {
     mF[0] = mY;
     mF[2] = mY;
   }
-  if (mT) mF[0] = mT;
-  if (mR) mF[1] = mR;
-  if (mB) mF[2] = mB;
-  if (mL) mF[3] = mL;
+  if (mT) {mF[0] = mT;}
+  if (mR) {mF[1] = mR;}
+  if (mB) {mF[2] = mB;}
+  if (mL) {mF[3] = mL;}
 
-  if (mF[0] === mF[1] && mF[1] === mF[2] && mF[2] === mF[3]) return mF[0];
+  if (mF[0] === mF[1] && mF[1] === mF[2] && mF[2] === mF[3]) {return mF[0];}
 
   mF.forEach((v, i) => {
-    if (!v) mF[i] = "0";
+    if (!v) {mF[i] = "0";}
   });
-  if (mF[0] === mF[2] && mF[1] === mF[3]) return `${mF[0]} ${mF[1]}`;
-  if (mF[1] === mF[3]) return `${mF[0]} ${mF[1]} ${mF[2]}`;
+  if (mF[0] === mF[2] && mF[1] === mF[3]) {return `${mF[0]} ${mF[1]}`;}
+  if (mF[1] === mF[3]) {return `${mF[0]} ${mF[1]} ${mF[2]}`;}
   return mF.join(" ");
 }
