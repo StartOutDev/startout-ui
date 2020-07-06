@@ -17,8 +17,8 @@ export interface HeadingProps {
 
 const getLevelSize = (level: HeadingLevel) => (6 - level) / 4 + 1.75;
 const getSizeLevel = (size: number) => {
-  if (size < 1.25) return 6;
-  if (size >= 2.75) return 1;
+  if (size < 1.25) {return 6;}
+  if (size >= 2.75) {return 1;}
   return 6 - Math.floor((size - 1.75) / 0.25);
 };
 const Heading = styled.div.attrs<HeadingProps>(
