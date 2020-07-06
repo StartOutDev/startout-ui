@@ -1,7 +1,6 @@
 {
   "name": "@startout/ui",
   "version": "0.0.0-semantically-released",
-  "private": true,
   "license": "MIT",
   "main": "dist/index.js",
   "repository": {
