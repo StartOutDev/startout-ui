@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run: yarn --frozen-lockfile
       - run: yarn build
-      - run: yarn semantic-release
+      - run: yarn run semantic-release
 
 workflows:
   version: 2
