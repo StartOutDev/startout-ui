@@ -1,9 +1,9 @@
-import { styled, Colour, FontWeight, ThemedProps } from "../shared";
-import { CSSObject } from "styled-components";
+import { styled, Colour, FontWeight, ThemedProps } from '../shared';
+import { CSSObject } from 'styled-components';
 
 export interface ButtonProps {
   background?: Colour;
-  display?: "block" | "inline-block";
+  display?: 'block' | 'inline-block';
   fontWeight?: FontWeight;
   margin?: string;
   text?: string;
@@ -13,9 +13,9 @@ export interface ButtonProps {
 
 const makeStyle = ({
   margin,
-  background = "red",
-  display = "inline-block",
-  textColour = "white",
+  background = 'red',
+  display = 'inline-block',
+  textColour = 'white',
   textSize = 1.15,
   fontWeight = 400,
   theme: { colours, fontFamily },
@@ -25,25 +25,25 @@ const makeStyle = ({
   fontWeight,
   margin,
   background: colours[background],
-  border: "none",
-  borderRadius: "1.5em",
+  border: 'none',
+  borderRadius: '1.5em',
   color: colours[textColour],
-  cursor: "pointer",
+  cursor: 'pointer',
   fontSize: `${textSize}rem`,
   lineHeight: 1,
-  outline: "none",
-  padding: ".9em 1.7em",
-  textDecoration: "none",
-  touchAction: "manipulation",
-  transition: "filter .5s ease-out",
-  userSelect: "none",
-  ":hover": {
-    filter: "saturate(1.2) brightness(1.1)",
-    transition: "filter 50ms",
+  outline: 'none',
+  padding: '.9em 1.7em',
+  textDecoration: 'none',
+  touchAction: 'manipulation',
+  transition: 'filter .5s ease-out',
+  userSelect: 'none',
+  ':hover': {
+    filter: 'saturate(1.2) brightness(1.1)',
+    transition: 'filter 50ms',
   },
-  ":active": {
-    filter: "brightness(1.25)",
-    transition: "filter .1s",
+  ':active': {
+    filter: 'brightness(1.25)',
+    transition: 'filter .1s',
   },
 });
 

@@ -1,8 +1,8 @@
-import React from "react";
-import Donations from "./Donations";
+import React from 'react';
+import Donations from './Donations';
 
 export default {
-  title: "Pages/Donations",
+  title: 'Pages/Donations',
   component: Donations,
 };
 

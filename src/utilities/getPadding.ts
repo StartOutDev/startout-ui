@@ -10,7 +10,7 @@ export interface Paddings {
 }
 
 function getPaddingFragments(padding?: string) {
-  const pF = padding ? padding.split(" ") : [undefined];
+  const pF = padding ? padding.split(' ') : [undefined];
   switch (pF.length) {
     case 4:
       return pF;
@@ -33,17 +33,33 @@ export function getPadding({ padding, p, pT, pR, pB, pL, pX, pY }: Paddings) {
     pF[0] = pY;
     pF[2] = pY;
   }
-  if (pT) {pF[0] = pT;}
-  if (pR) {pF[1] = pR;}
-  if (pB) {pF[2] = pB;}
-  if (pL) {pF[3] = pL;}
+  if (pT) {
+    pF[0] = pT;
+  }
+  if (pR) {
+    pF[1] = pR;
+  }
+  if (pB) {
+    pF[2] = pB;
+  }
+  if (pL) {
+    pF[3] = pL;
+  }
 
-  if (pF[0] === pF[1] && pF[1] === pF[2] && pF[2] === pF[3]) {return pF[0];}
+  if (pF[0] === pF[1] && pF[1] === pF[2] && pF[2] === pF[3]) {
+    return pF[0];
+  }
 
   pF.forEach((v, i) => {
-    if (!v) {pF[i] = "0";}
+    if (!v) {
+      pF[i] = '0';
+    }
   });
-  if (pF[0] === pF[2] && pF[1] === pF[3]) {return `${pF[0]} ${pF[1]}`;}
-  if (pF[1] === pF[3]) {return `${pF[0]} ${pF[1]} ${pF[2]}`;}
-  return pF.join(" ");
+  if (pF[0] === pF[2] && pF[1] === pF[3]) {
+    return `${pF[0]} ${pF[1]}`;
+  }
+  if (pF[1] === pF[3]) {
+    return `${pF[0]} ${pF[1]} ${pF[2]}`;
+  }
+  return pF.join(' ');
 }
