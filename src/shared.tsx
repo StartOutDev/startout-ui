@@ -1,8 +1,12 @@
-import React, { FC, PropsWithChildren } from "react";
+import React, { FC, PropsWithChildren, ReactNode } from "react";
 import * as styledComponents from "styled-components";
 import theme from "./theme";
 import { Margins, getMargin } from "./utilities/getMargin";
 import { getPadding, Paddings } from "./utilities/getPadding";
+
+interface ThemeProviderProps {
+  children: ReactNode;
+}
 
 export const {
   default: styled,
@@ -16,7 +20,7 @@ export const {
 
 export type ThemedProps<P> = styledComponents.ThemedStyledProps<P, Theme>;
 
-export const ThemeProvider: FC = ({ children }) => (
+export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => (
   <ProviderBase theme={theme}>{children}</ProviderBase>
 );
 
