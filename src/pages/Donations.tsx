@@ -21,7 +21,11 @@ const Donations = () => (
         processed securely and are in Australian Dollars.
       </Text>
       <Block display="flex" justifyContent="center" mB="2rem" textSize={1.25}>
-        <Toggle offLabel="Once-off" onLabel="Monthly" />
+        <Toggle
+          label="Donation preference"
+          offLabel="Once-off"
+          onLabel="Monthly"
+        />
       </Block>
       <Block display="flex" flexGrow={1} flexWrap="wrap">
         <Block maxWidth="25%" flex="0 0 25%" p="1.5rem .35rem" display="flex">

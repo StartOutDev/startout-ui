@@ -5,10 +5,11 @@ import Text from './Text';
 import { CSSObject } from 'styled-components';
 
 export interface ToggleProps {
-  offLabel?: ReactNode;
-  onLabel?: ReactNode;
   checked?: boolean;
+  label: string;
+  offLabel?: ReactNode;
   onChange?: ChangeEventHandler<HTMLInputElement>;
+  onLabel?: ReactNode;
 }
 
 const Input = styled.input.attrs(() => ({ type: 'checkbox' }))(
@@ -71,7 +72,13 @@ const Wrap = styled.label(
     } as CSSObject)
 );
 
-const Toggle: FC<ToggleProps> = ({ offLabel, onLabel, checked, onChange }) => (
+const Toggle: FC<ToggleProps> = ({
+  offLabel,
+  onLabel,
+  checked,
+  onChange,
+  label,
+}) => (
   <Wrap>
     {offLabel && (
       <Text mB="0" mR=".5em" lineHeight={1}>
@@ -79,7 +86,7 @@ const Toggle: FC<ToggleProps> = ({ offLabel, onLabel, checked, onChange }) => (
       </Text>
     )}
     <Input checked={checked} onChange={onChange} />
-    <Control />
+    <Control aria-label={label} />
     {onLabel && (
       <Text mB="0" mL=".7em" lineHeight={1}>
         {onLabel}
