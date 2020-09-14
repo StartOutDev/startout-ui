@@ -13,5 +13,6 @@ export const Default = () => (
     onLabel={text('On label', 'on')}
     offLabel={text('Off label', 'off')}
     checked={boolean('Checked', false)}
+    label={text('Accessibility Label', 'Toggle the Switch')}
   />
 );
