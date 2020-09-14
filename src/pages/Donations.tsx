@@ -1,11 +1,11 @@
-import React from "react";
-import Heading from "../components/Heading";
-import Text from "../components/Text";
-import Block from "../components/Block";
-import Card from "../components/Card";
-import Button from "../components/Button";
-import Toggle from "../components/Toggle";
-import TextBox from "../components/TextBox";
+import React from 'react';
+import Heading from '../components/Heading';
+import Text from '../components/Text';
+import Block from '../components/Block';
+import Card from '../components/Card';
+import Button from '../components/Button';
+import Toggle from '../components/Toggle';
+import TextBox from '../components/TextBox';
 
 const Donations = () => (
   <Block background="midLightGrey" textColour="darkBlue">
@@ -114,11 +114,11 @@ const Donations = () => (
               alt="StartOut Shirt"
               src="shirt.png"
               style={{
-                position: "absolute",
+                position: 'absolute',
                 right: 0,
-                width: "150px",
-                margin: "0 -10px",
-                userSelect: "none",
+                width: '150px',
+                margin: '0 -10px',
+                userSelect: 'none',
               }}
             />
           </Card>

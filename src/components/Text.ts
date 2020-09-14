@@ -1,15 +1,15 @@
-import { FC } from "react";
-import { styled, Colour, FontWeight, withMargin } from "../shared";
+import { FC } from 'react';
+import { styled, Colour, FontWeight, withMargin } from '../shared';
 
 export interface TextProps {
   colour?: Colour;
-  display?: "inline" | "block" | "inline-block";
+  display?: 'inline' | 'block' | 'inline-block';
   fontWeight?: FontWeight;
   lineHeight?: number;
   margin?: string;
   maxWidth?: string;
   text?: string;
-  textAlign?: "left" | "center" | "right";
+  textAlign?: 'left' | 'center' | 'right';
   textSize?: number;
 }
 
@@ -39,4 +39,4 @@ const Text = styled.div.attrs<TextProps>(({ children, text }) => ({
   })
 ) as FC<TextProps>;
 
-export default withMargin(Text, "0 0 .5rem 0");
+export default withMargin(Text, '0 0 .5rem 0');

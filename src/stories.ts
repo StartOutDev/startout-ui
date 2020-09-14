@@ -1,10 +1,10 @@
-import { number, select } from "@storybook/addon-knobs";
-import { FontWeight, Colour } from "./shared";
-import theme from "./theme";
+import { number, select } from '@storybook/addon-knobs';
+import { FontWeight, Colour } from './shared';
+import theme from './theme';
 
 export const fontWeight = (
   defaultValue: FontWeight,
-  name = "Font weight",
+  name = 'Font weight',
   groupId?: string
 ) =>
   number(
@@ -21,12 +21,12 @@ export const fontWeight = (
 
 export const colour = (
   defaultValue: Colour,
-  name = "Colour",
+  name = 'Colour',
   groupId?: string
 ) => select(name, Object.keys(theme.colours), defaultValue, groupId) as Colour;
 
 export const textSize = (
   defaultValue: number,
-  name = "Text size",
+  name = 'Text size',
   groupId?: string
 ) => number(name, defaultValue, { step: 0.5 }, groupId);

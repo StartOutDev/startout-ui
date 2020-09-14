@@ -1,24 +1,24 @@
-import React from "react";
-import Block from "../components/Block";
-import theme from "../theme";
-import Text from "../components/Text";
-import { Colour } from "../shared";
+import React from 'react';
+import Block from '../components/Block';
+import theme from '../theme';
+import Text from '../components/Text';
+import { Colour } from '../shared';
 
 export default {
-  title: "Theming/Colours",
+  title: 'Theming/Colours',
   component: React.Fragment,
 };
 
 export const Page = () => (
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(theme.colours).map(colour => (
       <div
         key={colour}
         style={{
-          flex: "0 0 33.33333%",
-          maxWidth: "33.33333%",
-          display: "flex",
-          alignItems: "middle",
+          flex: '0 0 33.33333%',
+          maxWidth: '33.33333%',
+          display: 'flex',
+          alignItems: 'middle',
         }}
       >
         <Block

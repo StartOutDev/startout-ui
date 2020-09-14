@@ -1,8 +1,8 @@
-import React, { FC, PropsWithChildren, ReactNode } from "react";
-import * as styledComponents from "styled-components";
-import theme from "./theme";
-import { Margins, getMargin } from "./utilities/getMargin";
-import { getPadding, Paddings } from "./utilities/getPadding";
+import React, { FC, PropsWithChildren, ReactNode } from 'react';
+import * as styledComponents from 'styled-components';
+import theme from './theme';
+import { Margins, getMargin } from './utilities/getMargin';
+import { getPadding, Paddings } from './utilities/getPadding';
 
 interface ThemeProviderProps {
   children: ReactNode;
@@ -50,4 +50,4 @@ export function withPadding<P extends { padding?: string }>(
 
 export type FontWeight = 400 | 500 | 600 | 700;
 export type Theme = typeof theme;
-export type Colour = keyof Theme["colours"];
+export type Colour = keyof Theme['colours'];

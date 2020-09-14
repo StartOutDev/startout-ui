@@ -1,20 +1,20 @@
-import { FC } from "react";
-import { styled, Colour, withMargin, withPadding } from "../shared";
+import { FC } from 'react';
+import { styled, Colour, withMargin, withPadding } from '../shared';
 
 export interface BlockProps {
-  alignItems?: "center" | "start" | "end";
+  alignItems?: 'center' | 'start' | 'end';
   background?: Colour;
-  display?: "inline" | "block" | "inline-block" | "flex";
+  display?: 'inline' | 'block' | 'inline-block' | 'flex';
   flex?: string;
-  flexDirection?: "row" | "row-reverse" | "column" | "column-reverse";
+  flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
   flexGrow?: number;
-  flexWrap?: "wrap";
-  justifyContent?: "center" | "flex-start" | "flex-end" | "space-between";
+  flexWrap?: 'wrap';
+  justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between';
   padding?: string;
-  position?: "relative";
+  position?: 'relative';
   margin?: string;
   maxWidth?: string;
-  textAlign?: "left" | "center" | "right";
+  textAlign?: 'left' | 'center' | 'right';
   textColour?: Colour;
   textSize?: number;
   zIndex?: number;
@@ -55,7 +55,7 @@ const Block = styled.div<BlockProps>(
     zIndex,
     color: textColour && colours[textColour],
     background: background && colours[background],
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     fontSize: textSize && `${textSize}rem`,
   })
 ) as FC<BlockProps>;
