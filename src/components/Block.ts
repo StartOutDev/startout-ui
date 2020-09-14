@@ -4,7 +4,7 @@ import { styled, Colour, withMargin, withPadding } from '../shared';
 export interface BlockProps {
   alignItems?: 'center' | 'start' | 'end';
   background?: Colour;
-  display?: 'inline' | 'block' | 'inline-block' | 'flex';
+  display?: 'inline' | 'block' | 'inline-block' | 'flex' | 'none';
   flex?: string;
   flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
   flexGrow?: number;
