@@ -8,6 +8,9 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
+export interface WithThemeFnInterface
+  extends styledComponents.WithThemeFnInterface<Theme> {}
+
 export const {
   default: styled,
   css,

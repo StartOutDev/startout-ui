@@ -20,7 +20,7 @@ export interface BlockProps {
   zIndex?: number;
 }
 
-const Block = styled.div<BlockProps>(
+const Block = styled.div.attrs(({ children }) => ({ children }))<BlockProps>(
   ({
     alignItems,
     background,
