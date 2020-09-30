@@ -2,6 +2,7 @@ const colours = {
   // Primary
   darkBlue: '#0D1968',
   blue: '#5070BF',
+
   // Secondary
   red: '#E55448',
   pink: '#FFB8B7',
@@ -12,6 +13,7 @@ const colours = {
   yellow: '#FFE179',
   lightYellow: '#FBF2CC',
   paleBlue: '#9FCFE3',
+
   // Neutral
   white: '#FFFFFF',
   lightGrey: '#EAF2F1',
