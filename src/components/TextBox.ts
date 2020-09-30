@@ -33,7 +33,7 @@ const TextBox = styled.input.attrs<TextBoxProps>(({ type = 'text' }) => ({
     border: 'none',
     outline: 'none',
     appearance: 'none',
-    padding: '0.2em',
+    padding: '0.25em',
     position: 'relative',
     color: colour && colours[colour],
     fontSize: `${textSize}rem`,
