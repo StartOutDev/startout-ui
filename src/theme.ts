@@ -21,6 +21,8 @@ const colours = {
   darkGrey: '#414858',
   darkerGrey: '#262A33',
   black: '#000000',
+  // Custom
+  midBlue: '#002c98',
 };
 
 const fontFamily = '"Circular Std"';

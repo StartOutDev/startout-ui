@@ -40,8 +40,8 @@ const TextBox = styled.input.attrs<TextBoxProps>(({ type = 'text' }) => ({
     ...(variant === 'box'
       ? { background: colours.white, borderRadius: '4px' }
       : {
-          borderBottom: `solid 3px ${colours[colour || 'darkBlue']}`,
-        }),
+        borderBottom: `solid 3px ${colours[colour || 'darkBlue']}`,
+      }),
   })
 ) as FC<TextBoxProps & InputHTMLAttributes<HTMLInputElement>>;
 

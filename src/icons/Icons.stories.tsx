@@ -15,5 +15,11 @@ export const Page = () => (
     <div>
       <Icons.Cross />
     </div>
+    <div>
+      <Icons.Search />
+    </div>
+    <div>
+      <Icons.Menu />
+    </div>
   </div>
 );

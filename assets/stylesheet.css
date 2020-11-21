@@ -33,3 +33,38 @@
   font-style: normal;
   font-display: swap;
 }
+
+.centered-div {
+  margin: auto;
+}
+
+.header-container {
+  display: flex;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .centered-div {
+    width: 100%;
+  }
+  .header-container {
+    display: block;
+    overflow: auto;
+  }
+  .mobile-menu {
+    display: block;
+    text-align: end;
+  }
+  .header-stretch {
+    width: 46%;
+    float: left;
+    padding: 2%;
+  }
+  .drop-container div{
+    position: static !important;
+    width: auto !important;
+  }
+}

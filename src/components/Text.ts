@@ -11,6 +11,8 @@ export interface TextProps {
   text?: string;
   textAlign?: 'left' | 'center' | 'right';
   textSize?: number;
+  variant?: 'plain' | 'underline';
+  height?: number,
 }
 
 const Text = styled.div.attrs<TextProps>(({ children, text }) => ({
@@ -21,11 +23,13 @@ const Text = styled.div.attrs<TextProps>(({ children, text }) => ({
     display,
     maxWidth,
     textAlign,
-    textSize,
+    textSize = 'center',
     margin,
+    variant,
     fontWeight = 400,
     lineHeight = 1.4,
     theme: { colours, fontFamily },
+    height = 'auto',
   }) => ({
     display,
     fontFamily,
@@ -35,7 +39,14 @@ const Text = styled.div.attrs<TextProps>(({ children, text }) => ({
     maxWidth,
     textAlign,
     color: colour && colours[colour],
+    height,
     fontSize: textSize && `${textSize}rem`,
+    ...(variant === 'underline' ?
+      {
+        textDecoration: `underline`,
+        cursor: `pointer`,
+      }
+      : { border: `none` }),
   })
 ) as FC<TextProps>;
 
