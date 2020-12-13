@@ -71,6 +71,12 @@ const Help = () => (
                                 fill="#fff" fill-opacity=".2" />
                         </svg>
                     </Block>
+                    <Block background="yellow" flex="0 0 50%" p="1.5rem .35rem">
+                        <svg width="560" height="243" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M100.815 142.685V243h42.37V142.685H243.5v-42.37H143.185V0h-42.37v100.315H.5v42.37h100.315z"
+                                fill="#fff" fill-opacity=".2" />
+                        </svg>
+                    </Block>
                 </Block>
             </Block>
         </Block>
