@@ -99,6 +99,18 @@ const Help = () => (
                         </svg>
                     </Block>
                 </Block>
+                <Block maxWidth="50%" flex="0 1 100%" p="1.5rem .35rem" display="flex" background="orange">
+                    <Block display="flex" textAlign="center" maxWidth="560px" margin="31px">
+                        <Heading maxWidth="255px" textSize={1.5}>
+                            Refer a young person
+                        </Heading>
+                    </Block>
+                    <Block display="flex">
+                        <svg width="243" height="243" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M205.031 37.969H37.969V205.03H205.03V37.969zM0 0v243h243V0H0z" fill="#fff" fill-opacity=".2" />
+                        </svg>
+                    </Block>
+                </Block>
             </Block>
         </Block>
     </Block>
